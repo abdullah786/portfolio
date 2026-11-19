@@ -7,7 +7,7 @@ import { Python } from "@/components/ui/svgs/python";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Java } from "@/components/ui/svgs/java";
-import { BarChart3, Bot, Brain, Component, FileCode, GitBranch, Hexagon, HomeIcon, NotebookIcon, Radio, Search, Server, Smartphone, Zap } from "lucide-react";
+import { BarChart3, Bot, Brain, GitBranch, HardDrive, Hexagon, HomeIcon, NotebookIcon, Radio, Search, Server, Smartphone, Workflow, Zap } from "lucide-react";
 
 /**
  * Profile, skills, and projects.
@@ -93,9 +93,9 @@ export const DATA = {
   location: "Frankfurt, Germany",
   locationLink: "https://www.google.com/maps/place/Frankfurt",
   description:
-    "Full stack and ML engineer based in Frankfurt, Germany, building agentic workflows in public. Dad.",
+    "Full stack and ML engineer based in Frankfurt, Germany, building agentic and agent-to-agent (Google A2A) workflows in public. Dad.",
   summary:
-    "Full stack and ML engineer by day, and I build products like Resume Pure and SwapStack on the side. Based in Frankfurt, Germany, building agentic workflows in public. Dad. Find me on [X](https://x.com/SMAbdullahAhsan).",
+    "Full stack and ML engineer by day, and I build products like Resume Pure and SwapStack on the side. Based in Frankfurt, Germany, building agentic and agent-to-agent (Google A2A) workflows in public. Dad. Find me on [X](https://x.com/SMAbdullahAhsan).",
   avatarUrl: "/avatar.webp",
   skills: [
     { name: "Python", icon: Python },
@@ -110,14 +110,14 @@ export const DATA = {
     { name: "PyTorch", icon: Brain },
     { name: "ONNX", icon: Hexagon },
     { name: "Docker", icon: Docker },
+    { name: "Proxmox", icon: HardDrive },
     { name: "GitLab CI", icon: GitBranch },
     { name: "Supabase", icon: Server },
     { name: "Expo / React Native", icon: Smartphone },
     { name: "Claude Code", icon: Bot },
+    { name: "A2A (Agent2Agent)", icon: Workflow },
     { name: "Java", icon: Java },
-    { name: "PL/SQL", icon: FileCode },
     { name: "Elasticsearch", icon: Search },
-    { name: "Angular", icon: Component },
   ] satisfies { name: string; icon: IconComponent }[],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -164,7 +164,7 @@ export const DATA = {
       start: "Dec 2021",
       end: "Present",
       description:
-        "Full-stack work on PVExplore, a data platform for photovoltaic measurements. A system can record up to about 80,000 measurements a day, with roughly 300 data points each. The backend is FastAPI and Python, the frontend is React 18 and TypeScript, and the data path uses ClickHouse and Redis Streams. I also work on machine learning and computer vision for electroluminescence defect detection on solar cells, using PyTorch, ONNX, and MLflow. Shipping covers Docker and Docker Swarm, GitLab CI, Ansible, Windows installers, and a Go updater.",
+        "Full-stack work on PVExplore, a data platform for photovoltaic measurements. A system can record up to about 80,000 measurements a day, with roughly 300 data points each. The backend is FastAPI and Python, the frontend is React 18 and TypeScript, and the data path uses ClickHouse and Redis Streams. I also work on machine learning and computer vision for electroluminescence defect detection on solar cells, using PyTorch, ONNX, and MLflow. Shipping covers Docker and Docker Swarm, Proxmox, GitLab CI, Ansible, Windows installers, and a Go updater.",
     },
     {
       company: "halm elektronik GmbH",
