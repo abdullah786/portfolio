@@ -15,7 +15,6 @@ import { BarChart3, Bot, Brain, GitBranch, HardDrive, Hexagon, HomeIcon, Noteboo
  * Search this file for "TODO" before publishing. Still open:
  * - TODO: production site URL (`NEXT_PUBLIC_SITE_URL`, see `.env.example`)
  * - TODO: GitHub username
- * - TODO: project screenshots (Resume Pure, SwapStack, SmashyKeys, Sujood)
  * - TODO: SwapStack source repository URL
  * - TODO: Sujood public URL
  *
@@ -320,13 +319,12 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      // TODO: screenshot. Example: "/projects/resume-pure.png"
-      image: "",
+      image: "/projects/resume-pure.webp",
       video: "",
     },
     {
       title: "SwapStack",
-      href: "https://www.npmjs.com/package/create-swapstack-app",
+      href: "https://swapstack.github.io/swapstack/",
       dates: "",
       active: true,
       status: "Live",
@@ -336,14 +334,18 @@ export const DATA = {
       technologies: ["Expo", "React Native"],
       links: [
         {
+          type: "Website",
+          href: "https://swapstack.github.io/swapstack/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
           type: "npm",
           href: "https://www.npmjs.com/package/create-swapstack-app",
           icon: <Icons.globe className="size-3" />,
         },
         // TODO: SwapStack source repository URL, once the GitHub username is known.
       ],
-      // TODO: screenshot. Example: "/projects/swapstack.png"
-      image: "",
+      image: "/projects/swapstack.webp",
       video: "",
     },
     {
@@ -358,7 +360,25 @@ export const DATA = {
         "A prayer app built with React Native and Expo. Currently in Google Play review and testing.",
       technologies: ["React Native", "Expo"],
       links: [],
-      // TODO: screenshot. Example: "/projects/sujood.png"
+      image: "",
+      video: "",
+    },
+    {
+      title: "FlyAlong",
+      href: "https://flyalong.app",
+      dates: "",
+      active: false,
+      status: "In progress",
+      group: "apps",
+      description: "An app that helps parents traveling alone with kids.",
+      technologies: [],
+      links: [
+        {
+          type: "Website",
+          href: "https://flyalong.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },
@@ -378,8 +398,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      // TODO: screenshot. Example: "/projects/smashykeys.png"
-      image: "",
+      image: "/projects/smashykeys.webp",
       video: "",
     },
   ] satisfies Project[],

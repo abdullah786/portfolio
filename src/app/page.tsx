@@ -52,7 +52,7 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar
                 className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted"
-                title={DATA.avatarUrl ? DATA.name : "TODO: avatar photo"}
+                title={DATA.name}
               >
                 {DATA.avatarUrl ? (
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover" />

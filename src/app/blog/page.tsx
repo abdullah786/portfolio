@@ -76,7 +76,7 @@ export default async function BlogPage({
                             {post.title}
                             {post.draft ? (
                               <Badge variant="outline" className="ml-2 align-middle text-[10px] uppercase tracking-wide h-5 px-1.5">
-                                Draft · TODO
+                                Draft
                               </Badge>
                             ) : null}
                             <ChevronRight

@@ -46,7 +46,7 @@ avatarUrl: "/avatar.jpg",
 image: "/projects/resume-pure.png",
 ```
 
-Until `image` is set, the card shows a `TODO: screenshot` placeholder. `video` can be a URL or a file in `public/` if you would rather show a clip than a still.
+Until `image` is set, the card shows an empty placeholder. `video` can be a URL or a file in `public/` if you would rather show a clip than a still.
 
 ### Site URL
 

@@ -9,13 +9,7 @@ import { useState } from "react";
 import Markdown from "react-markdown";
 
 function ScreenshotPlaceholder() {
-  return (
-    <div className="w-full h-48 bg-muted flex items-center justify-center px-6">
-      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-        TODO: screenshot
-      </span>
-    </div>
-  );
+  return <div className="w-full h-48 bg-muted" aria-hidden />;
 }
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {

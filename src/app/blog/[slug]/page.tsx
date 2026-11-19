@@ -140,7 +140,7 @@ export default async function Blog({
       <div className="flex flex-col gap-4">
         {post.draft ? (
           <p className="text-sm border border-border rounded-lg px-3 py-2 text-muted-foreground w-fit">
-            Draft · TODO. This post is a placeholder.
+            Draft. This post is a placeholder.
           </p>
         ) : null}
         <h1 className="title font-semibold text-3xl md:text-4xl tracking-tighter leading-tight">
