@@ -343,9 +343,10 @@ export const DATA = {
       href: "",
       dates: "",
       active: false,
-      status: "In progress",
+      status: "In review",
       group: "apps",
-      description: "A prayer app built with React Native and Expo.",
+      description:
+        "A prayer app built with React Native and Expo. Currently in Google Play review and testing.",
       technologies: ["React Native", "Expo"],
       links: [],
       // TODO: screenshot. Example: "/projects/sujood.png"
