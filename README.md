@@ -24,7 +24,7 @@ pnpm lint
 
 Open [`src/data/resume.tsx`](./src/data/resume.tsx) and change `DATA`.
 
-- `name`, `description`, and `summary` are the hero and the About section. `summary` is Markdown.
+- `name`, `hook`, and `blurb` are the lines under the photo. `profileLinks` is the short list under that. A link with `href: "TODO"` stays hidden.
 - `skills` is the row of chips. Each entry is a name plus an icon component.
 - `projects` is the project grid. `href` is the card link, `links` are the badges on the image, `technologies` are the tags, and `status` shows a label such as `In progress`. Leave `dates` empty when you do not have a real date.
 - `contact.social` is the dock at the bottom of the page. A link appears there only when `navbar` is `true` and `url` is a real address.

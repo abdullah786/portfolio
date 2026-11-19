@@ -3,7 +3,6 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
-import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
@@ -22,13 +21,34 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                text={DATA.name}
               />
               <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+                className="max-w-[600px] text-base sm:text-lg"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description}
+                text={DATA.hook}
               />
+              <BlurFadeText
+                className="text-muted-foreground max-w-[600px]"
+                delay={BLUR_FADE_DELAY * 2}
+                text={DATA.blurb}
+              />
+              <ul className="flex flex-col gap-1.5 pt-1 text-sm">
+                {DATA.profileLinks
+                  .filter((link) => link.href && link.href !== "TODO")
+                  .map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        target={link.href.startsWith("http") ? "_blank" : undefined}
+                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+              </ul>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar
@@ -44,19 +64,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
-        <div className="flex min-h-0 flex-col gap-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-              <Markdown>
-                {DATA.summary}
-              </Markdown>
-            </div>
-          </BlurFade>
-        </div>
+      <section id="projects">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <ProjectsSection />
+        </BlurFade>
       </section>
       {DATA.work.length > 0 && (
       <section id="work">
@@ -138,11 +149,6 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="projects">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <ProjectsSection />
-        </BlurFade>
       </section>
       {DATA.hackathons.length > 0 && (
       <section id="hackathons">

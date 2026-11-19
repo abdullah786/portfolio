@@ -18,6 +18,7 @@ import { BarChart3, Bot, Brain, GitBranch, HardDrive, Hexagon, HomeIcon, Noteboo
  * - TODO: project screenshots (Resume Pure, SwapStack, SmashyKeys, Sujood)
  * - TODO: SwapStack source repository URL
  * - TODO: Sujood public URL
+ * - TODO: Medium profile URL (`profileLinks`, hide until it is a real link)
  *
  * Hackathons stay empty. The homepage hides that section while the array is empty.
  */
@@ -69,6 +70,7 @@ type Project = {
   links: ProjectLink[];
   image: string;
   video: string;
+  group: "saas" | "apps";
 };
 
 type HackathonLink = {
@@ -93,9 +95,12 @@ export const DATA = {
   location: "Frankfurt, Germany",
   locationLink: "https://www.google.com/maps/place/Frankfurt",
   description:
-    "Full stack and ML engineer based in Frankfurt, Germany, building agentic and agent-to-agent (Google A2A) workflows in public. Dad.",
+    "I build agentic workflows, including Google A2A, and ship side products. Full stack and ML engineer at halm.",
+  hook: "i build agentic workflows, including google a2a, and ship side products.",
+  blurb:
+    "full stack and ml engineer at halm by day, building Resume Pure and SwapStack on the side.",
   summary:
-    "Full stack and ML engineer by day, and I build products like Resume Pure and SwapStack on the side. Based in Frankfurt, Germany, building agentic and agent-to-agent (Google A2A) workflows in public. Dad. Find me on [X](https://x.com/SMAbdullahAhsan).",
+    "i build agentic workflows, including google a2a, and ship side products. full stack and ml engineer at halm by day, building Resume Pure and SwapStack on the side.",
   avatarUrl: "/avatar.webp",
   skills: [
     { name: "Python", icon: Python },
@@ -153,6 +158,25 @@ export const DATA = {
       },
     },
   },
+  profileLinks: [
+    {
+      label: "@SMAbdullahAhsan on X, where i build in public",
+      href: "https://x.com/SMAbdullahAhsan",
+    },
+    {
+      label: "linkedin",
+      href: "https://www.linkedin.com/in/smabdullahahsan",
+    },
+    {
+      label: "email me",
+      href: "mailto:s.mabdullahahsan@gmail.com",
+    },
+    {
+      label: "my writing on Medium",
+      // TODO: Medium profile URL. This link stays hidden until href is a real URL.
+      href: "TODO",
+    },
+  ],
   work: [
     {
       company: "halm elektronik GmbH",
@@ -247,9 +271,10 @@ export const DATA = {
       href: "https://resumepure.com",
       dates: "",
       active: true,
-      status: "",
+      status: "live",
+      group: "saas",
       description:
-        "Web-first resume builder with ATS checks. Next.js web app, FastAPI ATS engine, and Supabase.",
+        "a web resume builder with ats checks. next.js, fastapi, and supabase.",
       technologies: ["Next.js", "FastAPI", "Supabase"],
       links: [
         {
@@ -267,9 +292,10 @@ export const DATA = {
       href: "https://www.npmjs.com/package/create-swapstack-app",
       dates: "",
       active: true,
-      status: "",
+      status: "live",
+      group: "saas",
       description:
-        "Free, open source Expo and React Native starter, published on npm as create-swapstack-app. Agent-friendly, with an AGENTS.md.",
+        "a free, open source expo starter, published as create-swapstack-app.",
       technologies: ["Expo", "React Native"],
       links: [
         {
@@ -284,13 +310,30 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Sujood",
+      // TODO: Sujood public URL when the app ships.
+      href: "",
+      dates: "",
+      active: false,
+      status: "in progress",
+      group: "apps",
+      description:
+        "a prayer app in react native and expo. no public link yet.",
+      technologies: ["React Native", "Expo"],
+      links: [],
+      // TODO: screenshot. Example: "/projects/sujood.png"
+      image: "",
+      video: "",
+    },
+    {
       title: "SmashyKeys",
       href: "https://smashykeys.com",
       dates: "",
       active: true,
-      status: "",
+      status: "live",
+      group: "apps",
       description:
-        "A keyboard smashing game I built for my kid in about 2 hours.",
+        "a keyboard smashing game i built for my kid in about 2 hours.",
       technologies: [],
       links: [
         {
@@ -300,21 +343,6 @@ export const DATA = {
         },
       ],
       // TODO: screenshot. Example: "/projects/smashykeys.png"
-      image: "",
-      video: "",
-    },
-    {
-      title: "Sujood",
-      // TODO: Sujood public URL when the app ships.
-      href: "",
-      dates: "",
-      active: false,
-      status: "In progress",
-      description:
-        "A prayer app built with React Native and Expo. No public link yet.",
-      technologies: ["React Native", "Expo"],
-      links: [],
-      // TODO: screenshot. Example: "/projects/sujood.png"
       image: "",
       video: "",
     },
