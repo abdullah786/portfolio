@@ -11,12 +11,24 @@ import { DATA } from "@/data/resume";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+function companyInitials(name: string) {
+  const skip = new Set(["gmbh", "ag", "inc", "llc", "ltd", "co", "kg"]);
+  const words = name
+    .split(/\s+/)
+    .map((word) => word.replace(/[^A-Za-z0-9]/g, ""))
+    .filter((word) => word && !skip.has(word.toLowerCase()));
+  const letters = words.map((word) => word[0]).join("").slice(0, 2);
+  return (letters || name.slice(0, 2)).toUpperCase();
+}
+
 function LogoImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
   if (!src || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+      <div className="size-8 md:size-10 border rounded-full shadow ring-2 ring-border bg-muted flex items-center justify-center text-[10px] md:text-xs font-semibold text-foreground flex-none">
+        {companyInitials(alt)}
+      </div>
     );
   }
 
@@ -35,8 +47,8 @@ export default function WorkSection() {
     <Accordion type="single" collapsible className="w-full grid gap-6">
       {DATA.work.map((work) => (
         <AccordionItem
-          key={work.company}
-          value={work.company}
+          key={`${work.company}-${work.start}`}
+          value={`${work.company}-${work.start}`}
           className="w-full border-b-0 grid gap-2"
         >
           <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
@@ -67,6 +79,11 @@ export default function WorkSection() {
                   <div className="font-sans text-sm text-muted-foreground">
                     {work.title}
                   </div>
+                  {work.location ? (
+                    <div className="font-sans text-xs text-muted-foreground">
+                      {work.location}
+                    </div>
+                  ) : null}
                 </div>
               </div>
               <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">

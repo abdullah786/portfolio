@@ -28,9 +28,9 @@ Open [`src/data/resume.tsx`](./src/data/resume.tsx) and change `DATA`.
 - `skills` is the row of chips. Each entry is a name plus an icon component.
 - `projects` is the project grid. `href` is the card link, `links` are the badges on the image, `technologies` are the tags, and `status` shows a label such as `In progress`. Leave `dates` empty when you do not have a real date.
 - `contact.social` is the dock at the bottom of the page. A link appears there only when `navbar` is `true` and `url` is a real address.
-- `work`, `education`, and `hackathons` start empty, so those sections stay off the homepage. Push a real object into the array and the section renders. Do not add a job, school, date, or number you cannot point at.
+- `work` and `education` are the job and school lists. `hackathons` stays empty, so that section stays off the homepage until you add a real entry. Do not add a date or number you cannot point at.
 
-Search the file for `TODO` before you deploy. Each one is something that was unknown when the site was set up (photo, email, GitHub, LinkedIn, screenshots, and a couple of project URLs).
+Search the file for `TODO` before you deploy. Each one is something still unknown (GitHub, screenshots, and a couple of project URLs).
 
 The browser tab and social preview title are `SITE_TITLE` in the same file: `Abdullah Ahsan, Full stack developer`.
 

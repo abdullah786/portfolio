@@ -1,25 +1,25 @@
 import { Icons } from "@/components/icons";
+import { Docker } from "@/components/ui/svgs/docker";
+import { Golang } from "@/components/ui/svgs/golang";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
+import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Python } from "@/components/ui/svgs/python";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { Typescript } from "@/components/ui/svgs/typescript";
-import { Bot, Cloud, Database, HomeIcon, Layers, NotebookIcon, Server, Smartphone, Sparkles } from "lucide-react";
+import { Java } from "@/components/ui/svgs/java";
+import { BarChart3, Bot, Brain, Component, FileCode, GitBranch, Hexagon, HomeIcon, NotebookIcon, Radio, Search, Server, Smartphone, Zap } from "lucide-react";
 
 /**
  * Profile, skills, and projects.
  *
  * Search this file for "TODO" before publishing. Still open:
  * - TODO: production site URL (`NEXT_PUBLIC_SITE_URL`, see `.env.example`)
- * - TODO: avatar photo
- * - TODO: email address
  * - TODO: GitHub username
- * - TODO: LinkedIn profile URL
  * - TODO: project screenshots (Resume Pure, SwapStack, SmashyKeys, Sujood)
  * - TODO: SwapStack source repository URL
  * - TODO: Sujood public URL
  *
- * Work history and education are intentionally empty. Add real entries later
- * and the homepage sections will show themselves. Do not invent any.
+ * Hackathons stay empty. The homepage hides that section while the array is empty.
  */
 
 // TODO: set NEXT_PUBLIC_SITE_URL to the production domain after deploying.
@@ -35,7 +35,7 @@ type Work = {
   company: string;
   href: string;
   badges: string[];
-  location: string;
+  location?: string;
   title: string;
   logoUrl: string;
   start: string;
@@ -93,47 +93,51 @@ export const DATA = {
   location: "Frankfurt, Germany",
   locationLink: "https://www.google.com/maps/place/Frankfurt",
   description:
-    "Full stack developer based in Frankfurt, Germany, building agentic workflows in public. Dad.",
+    "Full stack and ML engineer based in Frankfurt, Germany, building agentic workflows in public. Dad.",
   summary:
-    "I'm a full stack developer based in Frankfurt, Germany, building agentic workflows in public. Dad. Find me on [X](https://x.com/SMAbdullahAhsan).",
-  // TODO: avatar photo. Add a file such as public/avatar.jpg and set this to "/avatar.jpg".
-  avatarUrl: "",
+    "Full stack and ML engineer by day, and I build products like Resume Pure and SwapStack on the side. Based in Frankfurt, Germany, building agentic workflows in public. Dad. Find me on [X](https://x.com/SMAbdullahAhsan).",
+  avatarUrl: "/avatar.webp",
   skills: [
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "React", icon: ReactLight },
+    { name: "Python", icon: Python },
+    { name: "FastAPI", icon: Zap },
     { name: "TypeScript", icon: Typescript },
-    { name: "React Native / Expo", icon: Smartphone },
+    { name: "React", icon: ReactLight },
+    { name: "Next.js", icon: NextjsIconDark },
+    { name: "Go", icon: Golang },
+    { name: "ClickHouse", icon: BarChart3 },
+    { name: "Redis", icon: Radio },
+    { name: "PostgreSQL", icon: Postgresql },
+    { name: "PyTorch", icon: Brain },
+    { name: "ONNX", icon: Hexagon },
+    { name: "Docker", icon: Docker },
+    { name: "GitLab CI", icon: GitBranch },
     { name: "Supabase", icon: Server },
-    { name: "Postgres", icon: Database },
-    { name: "Vercel", icon: Cloud },
-    { name: "FastAPI / Python", icon: Python },
-    { name: "Flutter", icon: Layers },
-    { name: "Cursor", icon: Sparkles },
+    { name: "Expo / React Native", icon: Smartphone },
     { name: "Claude Code", icon: Bot },
+    { name: "Java", icon: Java },
+    { name: "PL/SQL", icon: FileCode },
+    { name: "Elasticsearch", icon: Search },
+    { name: "Angular", icon: Component },
   ] satisfies { name: string; icon: IconComponent }[],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    // TODO: email address. Example: "hello@your-domain.com"
-    email: "TODO",
+    email: "s.mabdullahahsan@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
         // TODO: GitHub username. Example: "https://github.com/your-username"
         url: "TODO",
         icon: Icons.github,
-        // TODO: set navbar to true after url is a real profile.
         navbar: false,
       },
       LinkedIn: {
         name: "LinkedIn",
-        // TODO: LinkedIn profile URL.
-        url: "TODO",
+        url: "https://www.linkedin.com/in/smabdullahahsan",
         icon: Icons.linkedin,
-        // TODO: set navbar to true after url is a real profile.
-        navbar: false,
+        navbar: true,
       },
       X: {
         name: "X",
@@ -143,17 +147,100 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        // TODO: email address. Example: "mailto:hello@your-domain.com"
-        url: "TODO",
+        url: "mailto:s.mabdullahahsan@gmail.com",
         icon: Icons.email,
-        navbar: false,
+        navbar: true,
       },
     },
   },
-  // Left empty on purpose. The homepage hides this section until there is a real entry.
-  work: [] as Work[],
-  // Left empty on purpose. The homepage hides this section until there is a real entry.
-  education: [] as Education[],
+  work: [
+    {
+      company: "halm elektronik GmbH",
+      href: "",
+      badges: [],
+      location: "Frankfurt am Main",
+      title: "Software Developer / Full-Stack & ML Engineer",
+      logoUrl: "",
+      start: "Dec 2021",
+      end: "Present",
+      description:
+        "Full-stack work on PVExplore, a data platform for photovoltaic measurements. A system can record up to about 80,000 measurements a day, with roughly 300 data points each. The backend is FastAPI and Python, the frontend is React 18 and TypeScript, and the data path uses ClickHouse and Redis Streams. I also work on machine learning and computer vision for electroluminescence defect detection on solar cells, using PyTorch, ONNX, and MLflow. Shipping covers Docker and Docker Swarm, GitLab CI, Ansible, Windows installers, and a Go updater.",
+    },
+    {
+      company: "halm elektronik GmbH",
+      href: "",
+      badges: [],
+      location: "Frankfurt am Main",
+      title: "Working Student, Software Development",
+      logoUrl: "",
+      start: "Mar 2019",
+      end: "Sep 2021",
+      description:
+        "Built export services for charts and a Python Apache Thrift service. Imported Excel, Access, and PNG data into Elasticsearch, and ran integration and UI testing.",
+    },
+    {
+      company: "Inbox Consulting",
+      href: "",
+      badges: [],
+      title: "Technical Consultant / Oracle ERP Developer",
+      logoUrl: "",
+      start: "Sep 2016",
+      end: "Aug 2018",
+      description:
+        "Customized OAF forms and reports, migrated programs and setup with FNDLOAD, and wrote PL/SQL packages and scripts.",
+    },
+    {
+      company: "Jaffer Brothers",
+      href: "",
+      badges: [],
+      title: "Oracle Cloud Consultant",
+      logoUrl: "",
+      start: "May 2016",
+      end: "Sep 2016",
+      description:
+        "Implemented Oracle Fusion HCM security, loaded data with the file-based loader, and built BI Publisher reports.",
+    },
+    {
+      company: "Inbox Business Technologies",
+      href: "",
+      badges: [],
+      title: "Associate Technical Consultant",
+      logoUrl: "",
+      start: "Jun 2015",
+      end: "May 2016",
+      description:
+        "Built custom OAF forms, reports, menus, and value sets, and designed XML Publisher templates.",
+    },
+    {
+      company: "Pakistan Army",
+      href: "",
+      badges: [],
+      title: "J2EE Programmer",
+      logoUrl: "",
+      start: "Apr 2015",
+      end: "May 2015",
+      description:
+        "Built Java web applications with Hibernate.",
+    },
+  ] satisfies Work[],
+  education: [
+    {
+      school: "Frankfurt University of Applied Sciences",
+      href: "",
+      degree: "Master's degree, Information Technology",
+      logoUrl: "",
+      start: "2018",
+      end: "2022",
+    },
+    {
+      school: "COMSATS University",
+      href: "",
+      degree: "Bachelor's degree, Electrical Engineering",
+      logoUrl: "",
+      start: "2010",
+      end: "2014",
+    },
+  ] satisfies Education[],
   projects: [
     {
       title: "Resume Pure",
