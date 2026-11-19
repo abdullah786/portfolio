@@ -9,7 +9,7 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function getSortedPosts() {
-  return [...allPosts].sort((a, b) => {
+  return [...allPosts].filter((post) => !post.draft).sort((a, b) => {
     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
       return -1;
     }
@@ -18,7 +18,7 @@ function getSortedPosts() {
 }
 
 export async function generateStaticParams() {
-  return allPosts.map((post) => ({
+  return getSortedPosts().map((post) => ({
     slug: post._meta.path.replace(/\.mdx$/, ""),
   }));
 }

@@ -7,6 +7,7 @@ import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import WritingSection from "@/components/section/writing-section";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -67,6 +68,13 @@ export default function Page() {
           <ProjectsSection />
         </BlurFade>
       </section>
+      {DATA.writing.length > 0 && (
+      <section id="writing">
+        <BlurFade delay={BLUR_FADE_DELAY * 12}>
+          <WritingSection />
+        </BlurFade>
+      </section>
+      )}
       {DATA.work.length > 0 && (
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">

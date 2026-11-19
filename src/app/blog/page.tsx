@@ -8,15 +8,15 @@ import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Writing from Abdullah Ahsan. The only post so far is a draft.",
+  description: "Notes from Abdullah Ahsan.",
   openGraph: {
     title: "Blog",
-    description: "Writing from Abdullah Ahsan. The only post so far is a draft.",
+    description: "Notes from Abdullah Ahsan.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog",
-    description: "Writing from Abdullah Ahsan. The only post so far is a draft.",
+    description: "Notes from Abdullah Ahsan.",
   },
 };
 
@@ -30,7 +30,7 @@ export default async function BlogPage({
 }) {
   const { page: pageParam } = await searchParams;
 
-  const posts = allPosts;
+  const posts = allPosts.filter((post) => !post.draft);
   const sortedPosts = [...posts].sort((a, b) => {
     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
       return -1;
@@ -50,7 +50,7 @@ export default async function BlogPage({
       <BlurFade delay={BLUR_FADE_DELAY}>
         <h1 className="text-2xl font-semibold tracking-tight mb-2">Blog <span className="ml-1 bg-card border border-border rounded-md px-2 py-1 text-muted-foreground text-sm">{sortedPosts.length} {sortedPosts.length === 1 ? "post" : "posts"}</span></h1>
         <p className="text-sm text-muted-foreground mb-8">
-          Notes will show up here. The current entry is a draft.
+          Notes will show up here.
         </p>
       </BlurFade>
 

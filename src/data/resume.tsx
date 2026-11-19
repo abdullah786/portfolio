@@ -18,7 +18,6 @@ import { BarChart3, Bot, Brain, GitBranch, HardDrive, Hexagon, HomeIcon, Noteboo
  * - TODO: project screenshots (Resume Pure, SwapStack, SmashyKeys, Sujood)
  * - TODO: SwapStack source repository URL
  * - TODO: Sujood public URL
- * - TODO: Medium profile URL (`profileLinks`, hide until it is a real link)
  *
  * Hackathons stay empty. The homepage hides that section while the array is empty.
  */
@@ -173,8 +172,7 @@ export const DATA = {
     },
     {
       label: "Medium",
-      // TODO: Medium profile URL. This link stays hidden until href is a real URL.
-      href: "TODO",
+      href: "https://medium.com/@s.mabdullahahsan",
     },
   ],
   work: [
@@ -247,6 +245,17 @@ export const DATA = {
         "Built Java web applications with Hibernate.",
     },
   ] satisfies Work[],
+  writing: [
+    {
+      title:
+        "I Found My Database Admin Key Inside a Docker Image. Here Is How I Fixed It.",
+      subtitle:
+        "One docker history command showed my secrets in plain text. Here is how I moved them to Doppler in one afternoon.",
+      date: "Nov 9, 2026",
+      source: "Medium",
+      href: "https://medium.com/@s.mabdullahahsan/i-found-my-database-admin-key-inside-a-docker-image-here-is-how-i-fixed-it-7b7d28924901",
+    },
+  ],
   education: [
     {
       school: "Frankfurt University of Applied Sciences",
