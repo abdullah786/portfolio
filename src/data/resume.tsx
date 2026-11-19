@@ -160,7 +160,7 @@ export const DATA = {
       badges: [],
       location: "Frankfurt am Main",
       title: "Software Developer / Full-Stack & ML Engineer",
-      logoUrl: "",
+      logoUrl: "/logos/halm.webp",
       start: "Dec 2021",
       end: "Present",
       description:
@@ -172,7 +172,7 @@ export const DATA = {
       badges: [],
       location: "Frankfurt am Main",
       title: "Working Student, Software Development",
-      logoUrl: "",
+      logoUrl: "/logos/halm.webp",
       start: "Mar 2019",
       end: "Sep 2021",
       description:
@@ -183,7 +183,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "Technical Consultant / Oracle ERP Developer",
-      logoUrl: "",
+      logoUrl: "/logos/inbox.webp",
       start: "Sep 2016",
       end: "Aug 2018",
       description:
@@ -194,7 +194,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "Oracle Cloud Consultant",
-      logoUrl: "",
+      logoUrl: "/logos/jaffer.webp",
       start: "May 2016",
       end: "Sep 2016",
       description:
@@ -205,7 +205,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "Associate Technical Consultant",
-      logoUrl: "",
+      logoUrl: "/logos/inbox.webp",
       start: "Jun 2015",
       end: "May 2016",
       description:
@@ -216,7 +216,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "J2EE Programmer",
-      logoUrl: "",
+      logoUrl: "/logos/pakistan-army.webp",
       start: "Apr 2015",
       end: "May 2015",
       description:
@@ -228,7 +228,7 @@ export const DATA = {
       school: "Frankfurt University of Applied Sciences",
       href: "",
       degree: "Master's degree, Information Technology",
-      logoUrl: "",
+      logoUrl: "/logos/frankfurt-uas.webp",
       start: "2018",
       end: "2022",
     },
@@ -236,7 +236,7 @@ export const DATA = {
       school: "COMSATS University",
       href: "",
       degree: "Bachelor's degree, Electrical Engineering",
-      logoUrl: "",
+      logoUrl: "/logos/comsats.webp",
       start: "2010",
       end: "2014",
     },
