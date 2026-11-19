@@ -265,6 +265,35 @@ export const DATA = {
       end: "2014",
     },
   ] satisfies Education[],
+  certifications: [
+    {
+      title: "Model Context Protocol: Advanced Topics",
+      issuer: "Anthropic",
+      date: "Jun 2026",
+      logoUrl: "/logos/anthropic.webp",
+      credentialId: "uik3tgu88txp",
+    },
+    {
+      title: "Introduction to Model Context Protocol",
+      issuer: "Anthropic",
+      date: "Jun 2026",
+      logoUrl: "/logos/anthropic.webp",
+      credentialId: "zmvbdsp9d8z2",
+    },
+    {
+      title: "Python Pandas",
+      issuer: "Kaggle",
+      date: "Sep 2022",
+      logoUrl: "/logos/kaggle.webp",
+    },
+    {
+      title: "Blockchain Essentials",
+      issuer: "Cognitive Class (IBM)",
+      date: "May 2021",
+      logoUrl: "/logos/cognitive-class.webp",
+      credentialId: "e1210296ab1c42428d8bf10c5241c9c5",
+    },
+  ],
   projects: [
     {
       title: "Resume Pure",

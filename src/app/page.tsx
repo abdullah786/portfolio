@@ -133,6 +133,49 @@ export default function Page() {
         </div>
       </section>
       )}
+      {DATA.certifications.length > 0 && (
+      <section id="certifications">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
+            <h2 className="text-xl font-bold">Certifications</h2>
+          </BlurFade>
+          <div className="flex flex-col gap-8">
+            {DATA.certifications.map((item, index) => (
+              <BlurFade
+                key={item.title}
+                delay={BLUR_FADE_DELAY * 8 + index * 0.05}
+              >
+                <div className="flex items-center gap-x-3 justify-between">
+                  <div className="flex items-center gap-x-3 flex-1 min-w-0">
+                    <img
+                      src={item.logoUrl}
+                      alt={item.issuer}
+                      className="size-8 md:size-10 border rounded-full shadow ring-2 ring-border overflow-hidden object-cover bg-white flex-none"
+                    />
+                    <div className="flex-1 min-w-0 flex flex-col gap-0.5">
+                      <div className="font-semibold leading-snug">
+                        {item.title}
+                      </div>
+                      <div className="font-sans text-sm text-muted-foreground">
+                        {item.issuer}
+                      </div>
+                      {"credentialId" in item && item.credentialId ? (
+                        <div className="font-sans text-[11px] leading-snug text-muted-foreground/80 break-all">
+                          ID {item.credentialId}
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                  <div className="text-xs tabular-nums text-muted-foreground text-right flex-none">
+                    {item.date}
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
