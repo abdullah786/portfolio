@@ -28,7 +28,7 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
   "http://localhost:3000";
 
-export const SITE_TITLE = "Abdullah Ahsan, Full stack developer";
+export const SITE_TITLE = "Abdullah Ahsan, Full-Stack & AI Engineer";
 
 type IconComponent = React.ComponentType<{ className?: string }>;
 
@@ -94,13 +94,13 @@ export const DATA = {
   url: SITE_URL,
   location: "Frankfurt, Germany",
   locationLink: "https://www.google.com/maps/place/Frankfurt",
+  headline: "Full-Stack & AI Engineer · Frankfurt, Germany",
   description:
-    "I build agentic workflows, including Google A2A, and ship side products. Full stack and ML engineer at halm.",
-  hook: "i build agentic workflows, including google a2a, and ship side products.",
-  blurb:
-    "full stack and ml engineer at halm by day, building Resume Pure and SwapStack on the side.",
+    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
+  hook:
+    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
   summary:
-    "i build agentic workflows, including google a2a, and ship side products. full stack and ml engineer at halm by day, building Resume Pure and SwapStack on the side.",
+    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
   avatarUrl: "/avatar.webp",
   skills: [
     { name: "Python", icon: Python },
@@ -160,19 +160,19 @@ export const DATA = {
   },
   profileLinks: [
     {
-      label: "@SMAbdullahAhsan on X, where i build in public",
+      label: "X",
       href: "https://x.com/SMAbdullahAhsan",
     },
     {
-      label: "linkedin",
+      label: "LinkedIn",
       href: "https://www.linkedin.com/in/smabdullahahsan",
     },
     {
-      label: "email me",
+      label: "Email",
       href: "mailto:s.mabdullahahsan@gmail.com",
     },
     {
-      label: "my writing on Medium",
+      label: "Medium",
       // TODO: Medium profile URL. This link stays hidden until href is a real URL.
       href: "TODO",
     },
@@ -300,10 +300,9 @@ export const DATA = {
       href: "https://resumepure.com",
       dates: "",
       active: true,
-      status: "live",
+      status: "Live",
       group: "saas",
-      description:
-        "a web resume builder with ats checks. next.js, fastapi, and supabase.",
+      description: "A web-first resume builder with ATS checks.",
       technologies: ["Next.js", "FastAPI", "Supabase"],
       links: [
         {
@@ -321,10 +320,10 @@ export const DATA = {
       href: "https://www.npmjs.com/package/create-swapstack-app",
       dates: "",
       active: true,
-      status: "live",
+      status: "Live",
       group: "saas",
       description:
-        "a free, open source expo starter, published as create-swapstack-app.",
+        "A free, open-source Expo and React Native starter, published as create-swapstack-app.",
       technologies: ["Expo", "React Native"],
       links: [
         {
@@ -344,10 +343,9 @@ export const DATA = {
       href: "",
       dates: "",
       active: false,
-      status: "in progress",
+      status: "In progress",
       group: "apps",
-      description:
-        "a prayer app in react native and expo. no public link yet.",
+      description: "A prayer app built with React Native and Expo.",
       technologies: ["React Native", "Expo"],
       links: [],
       // TODO: screenshot. Example: "/projects/sujood.png"
@@ -359,10 +357,9 @@ export const DATA = {
       href: "https://smashykeys.com",
       dates: "",
       active: true,
-      status: "live",
+      status: "Live",
       group: "apps",
-      description:
-        "a keyboard smashing game i built for my kid in about 2 hours.",
+      description: "A keyboard game for kids.",
       technologies: [],
       links: [
         {

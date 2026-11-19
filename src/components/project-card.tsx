@@ -131,7 +131,7 @@ export function ProjectCard({
               {status ? (
                 <Badge
                   variant="outline"
-                  className="text-[10px] uppercase tracking-wide h-5 px-1.5"
+                  className="text-[10px] tracking-wide h-5 px-1.5"
                 >
                   {status}
                 </Badge>

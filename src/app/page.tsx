@@ -24,16 +24,14 @@ export default function Page() {
                 text={DATA.name}
               />
               <BlurFadeText
-                className="max-w-[600px] text-base sm:text-lg"
+                className="text-base font-medium text-muted-foreground sm:text-lg"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.hook}
+                text={DATA.headline}
               />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px]"
-                delay={BLUR_FADE_DELAY * 2}
-                text={DATA.blurb}
-              />
-              <ul className="flex flex-col gap-1.5 pt-1 text-sm">
+              <p className="max-w-[600px] text-sm leading-relaxed text-muted-foreground sm:text-base">
+                {DATA.hook}
+              </p>
+              <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1 text-sm">
                 {DATA.profileLinks
                   .filter((link) => link.href && link.href !== "TODO")
                   .map((link) => (
@@ -42,7 +40,7 @@ export default function Page() {
                         href={link.href}
                         target={link.href.startsWith("http") ? "_blank" : undefined}
                         rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                        className="font-medium text-foreground underline-offset-4 hover:underline"
                       >
                         {link.label}
                       </a>

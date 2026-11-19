@@ -4,6 +4,10 @@ import { DATA } from "@/data/resume";
 
 const BLUR_FADE_DELAY = 0.04;
 const GROUP_ORDER = ["saas", "apps"] as const;
+const GROUP_LABELS: Record<(typeof GROUP_ORDER)[number], string> = {
+  saas: "SaaS",
+  apps: "Apps",
+};
 
 export default function ProjectsSection() {
   const groups = GROUP_ORDER.map((name) => ({
@@ -19,8 +23,8 @@ export default function ProjectsSection() {
         </BlurFade>
         {groups.map((group) => (
           <div key={group.name} className="flex flex-col gap-y-4">
-            <h3 className="text-sm font-medium lowercase text-muted-foreground">
-              {group.name}
+            <h3 className="text-sm font-medium text-muted-foreground">
+              {GROUP_LABELS[group.name]}
             </h3>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] auto-rows-fr">
               {group.projects.map((project, id) => (
