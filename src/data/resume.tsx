@@ -1,4 +1,5 @@
 import { Icons } from "@/components/icons";
+import { withBasePath } from "@/lib/base-path";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Golang } from "@/components/ui/svgs/golang";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
@@ -14,7 +15,6 @@ import { BarChart3, Bot, Brain, GitBranch, HardDrive, Hexagon, HomeIcon, Noteboo
  *
  * Search this file for "TODO" before publishing. Still open:
  * - TODO: production site URL (`NEXT_PUBLIC_SITE_URL`, see `.env.example`)
- * - TODO: GitHub username
  * - TODO: SwapStack source repository URL
  * - TODO: Sujood public URL
  *
@@ -99,7 +99,7 @@ export const DATA = {
     "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
   summary:
     "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
-  avatarUrl: "/avatar.webp",
+  avatarUrl: withBasePath("/avatar.webp"),
   skills: [
     { name: "Python", icon: Python },
     { name: "FastAPI", icon: Zap },
@@ -131,10 +131,9 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        // TODO: GitHub username. Example: "https://github.com/your-username"
-        url: "TODO",
+        url: "https://github.com/abdullah786",
         icon: Icons.github,
-        navbar: false,
+        navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
@@ -166,6 +165,10 @@ export const DATA = {
       href: "https://www.linkedin.com/in/smabdullahahsan",
     },
     {
+      label: "GitHub",
+      href: "https://github.com/abdullah786",
+    },
+    {
       label: "Email",
       href: "mailto:s.mabdullahahsan@gmail.com",
     },
@@ -181,7 +184,7 @@ export const DATA = {
       badges: [],
       location: "Frankfurt am Main",
       title: "Software Developer / Full-Stack & ML Engineer",
-      logoUrl: "/logos/halm.webp",
+      logoUrl: withBasePath("/logos/halm.webp"),
       start: "Dec 2021",
       end: "Present",
       description:
@@ -193,7 +196,7 @@ export const DATA = {
       badges: [],
       location: "Frankfurt am Main",
       title: "Working Student, Software Development",
-      logoUrl: "/logos/halm.webp",
+      logoUrl: withBasePath("/logos/halm.webp"),
       start: "Mar 2019",
       end: "Sep 2021",
       description:
@@ -204,7 +207,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "Technical Consultant / Oracle ERP Developer",
-      logoUrl: "/logos/inbox.webp",
+      logoUrl: withBasePath("/logos/inbox.webp"),
       start: "Sep 2016",
       end: "Aug 2018",
       description:
@@ -215,7 +218,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "Oracle Cloud Consultant",
-      logoUrl: "/logos/jaffer.webp",
+      logoUrl: withBasePath("/logos/jaffer.webp"),
       start: "May 2016",
       end: "Sep 2016",
       description:
@@ -226,7 +229,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "Associate Technical Consultant",
-      logoUrl: "/logos/inbox.webp",
+      logoUrl: withBasePath("/logos/inbox.webp"),
       start: "Jun 2015",
       end: "May 2016",
       description:
@@ -237,7 +240,7 @@ export const DATA = {
       href: "",
       badges: [],
       title: "J2EE Programmer",
-      logoUrl: "/logos/pakistan-army.webp",
+      logoUrl: withBasePath("/logos/pakistan-army.webp"),
       start: "Apr 2015",
       end: "May 2015",
       description:
@@ -260,7 +263,7 @@ export const DATA = {
       school: "Frankfurt University of Applied Sciences",
       href: "",
       degree: "Master's degree, Information Technology",
-      logoUrl: "/logos/frankfurt-uas.webp",
+      logoUrl: withBasePath("/logos/frankfurt-uas.webp"),
       start: "2018",
       end: "2022",
     },
@@ -268,7 +271,7 @@ export const DATA = {
       school: "COMSATS University",
       href: "",
       degree: "Bachelor's degree, Electrical Engineering",
-      logoUrl: "/logos/comsats.webp",
+      logoUrl: withBasePath("/logos/comsats.webp"),
       start: "2010",
       end: "2014",
     },
@@ -278,27 +281,27 @@ export const DATA = {
       title: "Model Context Protocol: Advanced Topics",
       issuer: "Anthropic",
       date: "Jun 2026",
-      logoUrl: "/logos/anthropic.webp",
+      logoUrl: withBasePath("/logos/anthropic.webp"),
       credentialId: "uik3tgu88txp",
     },
     {
       title: "Introduction to Model Context Protocol",
       issuer: "Anthropic",
       date: "Jun 2026",
-      logoUrl: "/logos/anthropic.webp",
+      logoUrl: withBasePath("/logos/anthropic.webp"),
       credentialId: "zmvbdsp9d8z2",
     },
     {
       title: "Python Pandas",
       issuer: "Kaggle",
       date: "Sep 2022",
-      logoUrl: "/logos/kaggle.webp",
+      logoUrl: withBasePath("/logos/kaggle.webp"),
     },
     {
       title: "Blockchain Essentials",
       issuer: "Cognitive Class (IBM)",
       date: "May 2021",
-      logoUrl: "/logos/cognitive-class.webp",
+      logoUrl: withBasePath("/logos/cognitive-class.webp"),
       credentialId: "e1210296ab1c42428d8bf10c5241c9c5",
     },
   ],
@@ -319,7 +322,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/resume-pure.webp",
+      image: withBasePath("/projects/resume-pure.webp"),
       video: "",
     },
     {
@@ -345,7 +348,7 @@ export const DATA = {
         },
         // TODO: SwapStack source repository URL, once the GitHub username is known.
       ],
-      image: "/projects/swapstack.webp",
+      image: withBasePath("/projects/swapstack.webp"),
       video: "",
     },
     {
@@ -398,7 +401,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/smashykeys.webp",
+      image: withBasePath("/projects/smashykeys.webp"),
       video: "",
     },
   ] satisfies Project[],

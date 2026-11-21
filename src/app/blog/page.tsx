@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-static";
+
 const PAGE_SIZE = 5;
 const BLUR_FADE_DELAY = 0.04;
 

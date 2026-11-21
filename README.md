@@ -80,6 +80,10 @@ Write the post in Markdown.
 
 `title`, `publishedAt`, and `summary` are required. `updatedAt`, `author`, `image`, and `draft` are optional. The schema is in [`content-collections.ts`](./content-collections.ts).
 
+## Deploy on GitHub Pages
+
+Pushes to `main` run [`.github/workflows/pages.yml`](./.github/workflows/pages.yml). That build sets `GITHUB_PAGES=true`, which exports a static site with `basePath` `/portfolio`, and publishes it to GitHub Pages. The live URL is [https://abdullah786.github.io/portfolio](https://abdullah786.github.io/portfolio). In the repository settings, Pages must use **GitHub Actions** as the source.
+
 ## Deploy on Vercel
 
 1. Push this repo to GitHub.

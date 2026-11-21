@@ -2,11 +2,13 @@ import { allPosts } from "content-collections";
 import { formatDate } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 function getSortedPosts() {
   return [...allPosts].filter((post) => !post.draft).sort((a, b) => {
@@ -18,7 +20,12 @@ function getSortedPosts() {
 }
 
 export async function generateStaticParams() {
-  return getSortedPosts().map((post) => ({
+  const posts = getSortedPosts();
+  // Static export needs at least one path. Drafts stay unpublished.
+  if (posts.length === 0) {
+    return [{ slug: "_empty" }];
+  }
+  return posts.map((post) => ({
     slug: post._meta.path.replace(/\.mdx$/, ""),
   }));
 }
@@ -89,8 +96,12 @@ export default async function Blog({
   );
   const post = sortedPosts[currentIndex];
 
-  if (!post) {
-    notFound();
+  if (!post || post.draft) {
+    return (
+      <section id="blog">
+        <p className="text-sm text-muted-foreground">No published posts yet.</p>
+      </section>
+    );
   }
 
   const previousPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
