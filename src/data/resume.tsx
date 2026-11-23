@@ -94,11 +94,11 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Frankfurt",
   headline: "Full-Stack & AI Engineer · Frankfurt, Germany",
   description:
-    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
+    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I'm currently building FlyAlong, SwapStack, and the Sujood app.",
   hook:
-    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
+    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I'm currently building FlyAlong, SwapStack, and the Sujood app.",
   summary:
-    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I build Resume Pure and SwapStack.",
+    "I build data platforms, ML pipelines and agentic AI workflows, including agent-to-agent systems with Google A2A and MCP. By day I'm a full-stack and ML engineer at halm elektronik; on the side I'm currently building FlyAlong, SwapStack, and the Sujood app.",
   avatarUrl: withBasePath("/avatar.webp"),
   skills: [
     { name: "Python", icon: Python },
