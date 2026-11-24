@@ -250,6 +250,15 @@ export const DATA = {
   writing: [
     {
       title:
+        "I let my 2-year-old break my laptop. Then I built him a toy for it in 2 hours.",
+      subtitle:
+        "How my toddler’s keyboard obsession, one weekend afternoon and Claude Opus 5.5 turned into a little website that the kids in my family now play every day.",
+      date: "Nov 24, 2026",
+      source: "Medium",
+      href: "https://medium.com/@s.mabdullahahsan/i-let-my-2-year-old-break-my-laptop-then-i-built-him-a-toy-for-it-in-2-hours-8aecea5ac224",
+    },
+    {
+      title:
         "I Found My Database Admin Key Inside a Docker Image. Here Is How I Fixed It.",
       subtitle:
         "One docker history command showed my secrets in plain text. Here is how I moved them to Doppler in one afternoon.",
