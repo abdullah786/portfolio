@@ -382,7 +382,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: withBasePath("/projects/flyalong.webp"),
       video: "",
     },
     {
