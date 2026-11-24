@@ -372,7 +372,7 @@ export const DATA = {
         "A prayer app built with React Native and Expo. Currently in Google Play review and testing.",
       technologies: ["React Native", "Expo"],
       links: [],
-      image: "",
+      image: withBasePath("/projects/sujood.webp"),
       video: "",
     },
     {
